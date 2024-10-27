@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Sales Projection</h2>
+<form method="POST" action="/projection">
+    <input type="number" name="days" placeholder="Enter number of days">
+    <button type="submit">Calculate Projection</button>
+</form>
+
+{% if projection %}
+<p>Projected Sales for {{ request.form.get('days') }} days: ${{ projection }}</p>
+{% endif %}
+{% endblock %}

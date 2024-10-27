@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Enter Daily Sales</h2>
+<form method="POST" action="/">
+    <input type="text" name="sale" placeholder="Enter sale amount">
+    <button type="submit">Add Sale</button>
+</form>
+
+{% for sale in sales %}
+<p>Sale {{ loop.index }}: ${{ sale }}</p>
+
+{% endfor %}
+<a href="{{ url_for('report') }}">View Report</a>
+
+{% endblock %}

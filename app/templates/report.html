@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Daily Sales Report</h2>
+<p>Total Sales: ${{ total }}</p>
+<p>Average Sales: ${{ average }}</p>
+
+<a href="{{ url_for('projection') }}">Sales Projection</a>
+{% endblock %}
